@@ -9,3 +9,5 @@ ThisBuild / organization := "com.thoughtworks.binding"
 dynverSeparator in ThisBuild := "-"
 
 skip in publish := true
+
+parallelExecution in Global := scalaBinaryVersion.value != "2.10"
