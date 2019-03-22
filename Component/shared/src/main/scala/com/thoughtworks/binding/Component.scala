@@ -16,7 +16,7 @@ trait Component[-State, +Result] {
 
 object Component {
   sealed trait ChangeSet[+Result] {
-    type State
+    private[Component] type State
     private[Component] val component: Component[State, Result]
     private[Component] val state: State
   }
